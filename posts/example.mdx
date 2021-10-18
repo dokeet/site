@@ -1,0 +1,20 @@
+---
+title: "This is the title of the blog post test 1"
+description: "Ad magna incididunt consequat sint commodo cillum duis ad esse quis irure qui ex fugiat."
+publishedAt: "2021-03-26"
+category: "post"
+source: "https://jorgecabello.com/blog"
+image: "blog/placeholder4.jpg"
+---
+
+import { Counter } from "../ui/counter"
+
+<Counter />
+I'm a big fan of The like button on his blog is one of the most delightful UI elements I've come across. It's also a deceptively complex component (I honestly thought I could re-implement it in an hour, haha) that contains an SVG, sounds, mouse tracking, animations and of course, exploding confetti. 🎉
+
+After reading his [How I built my blog](https://www.joshwcomeau.com/blog/how-i-built-my-blog/) article where he talked about persisting the number of likes to a database, I knew I wanted to experiment creating something similar. I thought this would be a good example to begin my 30 day front-end challenge because it's an isolated component that connects the front-end with the back-end.
+
+I started by writing down everything I noticed with Josh's component and ended up with a list of 15 things triggered by user interaction (i.e. onClick: changes number color from gray to pink, increments counter, scales heart, shows and fades +1 sign, etc). The attention to detail is ridiculous, but that's what makes it so good.
+
+Although I didn't have the time to recreate everything, I thought I'd try to get the basic functionality down and maybe add some animations. Here's how my version works:
+
