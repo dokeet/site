@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getPost, getAllPosts } from "lib/mdx";
 import { getMDXComponent } from "mdx-bundler/client";
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -6,6 +7,7 @@ import React from "react";
 import type { Post } from "types/post";
 import userConfig from "user-config";
 import Layout from "ui/layout";
+import { components } from "ui/components";
 
 export default function PostPage({ meta, code }: Post) {
   // This is a bit weird, but this is how mdx-bundler recommends it.
@@ -37,11 +39,23 @@ export default function PostPage({ meta, code }: Post) {
         }}
       />
 
-      <div className="container max-w-3xl px-4 mx-auto mt-36 prose lg:prose-xl ">
-        <h1>{meta.title}</h1>
-
-        <div className="mt-10 text-gray-900">
-          <Component />
+      <div className="container max-w-3xl px-4 mx-auto mt-12 prose prose-lg">
+        <div className="relative h-96">
+          <h1>{meta.title}</h1>
+          {meta.image && (
+            <div className="w-full max-h-[360px]">
+              <Image
+                src={meta.image}
+                alt={meta.title}
+                width="760px"
+                height="360px"
+                objectFit="cover"
+              />
+            </div>
+          )}
+        </div>
+        <div className="mt-10 text-black">
+          <Component components={components} />
         </div>
 
         <div className="flex justify-center mt-16 space-x-8"></div>

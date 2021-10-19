@@ -31,6 +31,7 @@ export default function Blog({
                     height="180px"
                     width="736px"
                     className="w-full max-h-[180px] object-cover rounded-lg mx-auto shadow-lg hover:shadow-2xll duration-300 transition filter saturate-50 hover:saturate-100"
+                    objectFit="cover"
                   />
                 )}
                 <div className="p-4">

@@ -45,6 +45,7 @@ export default function BlogPage({ posts }: { posts: PostMeta[] }) {
                         width="736px"
                         height="180px"
                         className="w-full max-h-[180px] object-cover rounded-lg mx-auto transition duration-500 filter saturate-[15%] group-hover:saturate-100"
+                        objectFit="cover"
                       />
                     )}
                   </div>
