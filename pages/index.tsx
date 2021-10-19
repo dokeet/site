@@ -4,7 +4,8 @@ import Image from "next/image";
 import type { PostMeta } from "types/post";
 import Link from "next/link";
 import userConfig from "user-config";
-import Layout from "ui/layout";
+import Layout from "ui/Layout";
+import Card from "ui/PostCard";
 export function getStaticProps() {
   const posts = getAllPosts("featured");
   return { props: { posts } };
@@ -31,35 +32,7 @@ export default function BlogPage({ posts }: { posts: PostMeta[] }) {
         </h4>
         <div className="mt-4 w-full mx-auto">
           {posts.map((post) => (
-            <div
-              key={post.slug}
-              className="w-full mb-2 rounded-xl pt-2 bg-gray-50 group"
-            >
-              <Link href={`/blog/${post.slug}`}>
-                <a>
-                  <div className="transition duration-300 drop-shadow group-hover:drop-shadow-xl ">
-                    {post.image && (
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        width="736px"
-                        height="180px"
-                        className="w-full max-h-[180px] object-cover rounded-lg mx-auto transition duration-500 filter saturate-[15%] group-hover:saturate-100"
-                        objectFit="cover"
-                      />
-                    )}
-                  </div>
-                  <div className="p-4">
-                    <h1 className="text-xl font-bold text-gray-900 group-hover:text-gray-600 transition-colors duration-300">
-                      {post.title}
-                    </h1>
-                    <p className="text-gray-900 font-light">
-                      {post.description}
-                    </p>
-                  </div>
-                </a>
-              </Link>
-            </div>
+            <Card {...post} key={post.slug} />
           ))}
         </div>
       </div>

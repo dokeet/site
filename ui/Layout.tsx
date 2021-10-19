@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React, { FC } from "react";
-import userConfig from "user-config";
+import userConfig from "../user-config";
 const Layout: FC = ({ children }) => {
   return (
-    <div className="max-w-3xl mx-auto py-12 font-my-font">
+    <div className="max-w-3xl mx-auto py-12 font-my-font selection:bg-gray-600 selection:text-white">
       <nav>
         <ul className="flex space-x-2 justify-end">
           <Link href="/">

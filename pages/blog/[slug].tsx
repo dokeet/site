@@ -6,8 +6,8 @@ import { NextSeo } from "next-seo";
 import React from "react";
 import type { Post } from "types/post";
 import userConfig from "user-config";
-import Layout from "ui/layout";
-import { components } from "ui/components";
+import Layout from "ui/Layout";
+import MDXComponents from "ui/MDXComponents";
 
 export default function PostPage({ meta, code }: Post) {
   // This is a bit weird, but this is how mdx-bundler recommends it.
@@ -55,7 +55,7 @@ export default function PostPage({ meta, code }: Post) {
           )}
         </div>
         <div className="mt-10 text-black">
-          <Component components={components} />
+          <Component components={MDXComponents} />
         </div>
 
         <div className="flex justify-center mt-16 space-x-8"></div>

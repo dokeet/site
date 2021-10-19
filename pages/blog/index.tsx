@@ -3,7 +3,7 @@ import React from "react";
 import type { PostMeta } from "types/post";
 import Link from "next/link";
 import { generateRSSFeed } from "lib/rss";
-import Layout from "ui/layout";
+import Layout from "ui/Layout";
 import Image from "next/image";
 
 export default function Blog({
