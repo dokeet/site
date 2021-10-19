@@ -40,7 +40,7 @@ export default function PostPage({ meta, code }: Post) {
       />
 
       <div className="container max-w-3xl px-4 mx-auto mt-12 prose prose-lg">
-        <div className="relative h-96">
+        <div className="relative">
           <h1>{meta.title}</h1>
           {meta.image && (
             <div className="w-full max-h-[360px]">
