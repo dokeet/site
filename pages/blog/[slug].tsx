@@ -8,6 +8,7 @@ import type { Post } from "types/post";
 import userConfig from "user-config";
 import Layout from "ui/Layout";
 import MDXComponents from "ui/MDXComponents";
+import { format, parseISO } from "date-fns";
 
 export default function PostPage({ meta, code }: Post) {
   // This is a bit weird, but this is how mdx-bundler recommends it.
@@ -39,9 +40,13 @@ export default function PostPage({ meta, code }: Post) {
         }}
       />
 
-      <div className="container max-w-3xl px-4 mx-auto mt-12 prose prose-lg">
+      <div className="container max-w-3xl px-4 mx-auto mt-12">
         <div className="relative">
-          <h1>{meta.title}</h1>
+          <h1 className="text-gray-900 dark:text-gray-100">{meta.title}</h1>
+          <p className="text-gray-900 dark:text-gray-100 text-right">
+            {format(parseISO(meta.publishedAt), "MMMM dd, yyyy")}
+          </p>
+
           {meta.image && (
             <div className="w-full max-h-[360px]">
               <Image
@@ -54,7 +59,7 @@ export default function PostPage({ meta, code }: Post) {
             </div>
           )}
         </div>
-        <div className="mt-10 text-black">
+        <div className="mt-10 prose prose-lg dark:prose-dark">
           <Component components={MDXComponents} />
         </div>
 
