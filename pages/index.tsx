@@ -22,7 +22,7 @@ export default function BlogPage({ posts }: { posts: PostMeta[] }) {
         </p>
       </div>
       <div className="mt-6">
-        <h3 className="font-extrabold text-gray-800 dark:text-gray-100 text-3xl">
+        <h3 className="font-bold text-gray-800 dark:text-gray-100 text-3xl">
           <Link href="/blog">
             <a>Feature Posts</a>
           </Link>

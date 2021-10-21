@@ -1,3 +1,5 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   mode: "jit",
   purge: [
@@ -61,7 +63,7 @@ module.exports = {
       }),
     },
     fontFamily: {
-      "my-font": ["-apple-system", "BlinkMacSystemFont", "sans-serif"],
+      sans: ["Inter", ...fontFamily.sans],
     },
   },
   variants: {

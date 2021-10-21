@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider attribute="class">
-      <div className="font-my-font bg-gray-100 dark:bg-gray-900">
+      <div className="font-sans bg-gray-100 dark:bg-gray-900">
         <Layout pageProps={pageProps}>
           <DefaultSeo {...SEO} />
           <Component {...pageProps} />
