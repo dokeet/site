@@ -28,9 +28,7 @@ export default function Blog({
 
 export function getStaticProps() {
   const posts = getAllPosts();
-  const drafts = getAllPosts("draft");
-  generateRSSFeed(posts);
-  return { props: { posts, drafts } };
+  return { props: { posts } };
 }
 
 Blog.Layout = Layout;
