@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { FC } from "react";
 import userConfig from "../user-config";
-import { ThemeToggler } from "./ThemeToggler";
+import ThemeToggler from "./ThemeToggler";
 const Layout: FC = ({ children }) => {
   return (
     <div className="max-w-3xl mx-auto py-12 selection:bg-gray-600 selection:text-gray-100 dark:selection:text-gray-900 dark:selection:bg-gray-300 p-4">

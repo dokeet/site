@@ -1,0 +1,21 @@
+.root {
+  all: unset;
+  width: 42px;
+  height: 21px;
+  background-color: white;
+  border-radius: 9999px;
+  position: relative;
+}
+.root[data-state="checked"] {
+  background-color: black;
+}
+.thumb {
+  display: block;
+  transition: transform 100ms ease-in-out;
+  transform-origin: center center;
+  transform: translate(0px);
+  will-change: transform;
+}
+.thumb[data-state="checked"] {
+  transform: translate(21px);
+}
