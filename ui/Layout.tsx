@@ -4,7 +4,7 @@ import userConfig from "../user-config";
 import { ThemeToggler } from "./ThemeToggler";
 const Layout: FC = ({ children }) => {
   return (
-    <div className="max-w-3xl mx-auto py-12 font-my-font selection:bg-gray-600 selection:text-white dark:selection:text-gray-900 dark:selection:bg-gray-300">
+    <div className="max-w-3xl mx-auto py-12 selection:bg-gray-600 selection:text-gray-100 dark:selection:text-gray-900 dark:selection:bg-gray-300 p-4">
       <nav>
         <ul className="flex space-x-2 justify-end">
           <li>
@@ -26,8 +26,8 @@ const Layout: FC = ({ children }) => {
           </li>
         </ul>
       </nav>
-      <main className="p-4">{children}</main>
-      <footer>
+      <main className="flex-1">{children}</main>
+      <footer className="flex-0">
         <ul className="flex space-x-2 justify-end">
           <li>
             <a

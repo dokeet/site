@@ -13,7 +13,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme("colors.gray.700"),
+            color: theme("colors.gray.900"),
             a: {
               color: theme("colors.gray.500"),
               "&:hover": {
@@ -33,31 +33,44 @@ module.exports = {
           css: {
             color: theme("colors.gray.300"),
             a: {
-              color: theme("colors.gray.400"),
+              color: theme("colors.gray.300"),
               "&:hover": {
-                color: theme("colors.gray.600"),
+                color: theme("colors.gray.400"),
               },
-              code: { color: theme("colors.gray.400") },
             },
+            code: { color: theme("colors.gray.100") },
             blockquote: {
               borderLeftColor: theme("colors.gray.700"),
-              color: theme("colors.gray.300"),
+              color: theme("colors.gray.100"),
             },
-            "h1,h2,h3,h4,h5,h6": {
+            "h1,h2,h3,h4": {
+              color: theme("colors.gray.100"),
+            },
+            p: {
               color: theme("colors.gray.100"),
             },
             hr: { borderColor: theme("colors.gray.700") },
             ol: {
               li: {
-                "&:before": { color: theme("colors.gray.500") },
+                "&:before": { color: theme("colors.gray.100") },
+                color: theme("colors.gray.100"),
               },
             },
             ul: {
               li: {
-                "&:before": { backgroundColor: theme("colors.gray.500") },
+                "&:before": {
+                  backgroundColor: theme("colors.gray.100"),
+                },
+                color: theme("colors.gray.100"),
               },
             },
             strong: { color: theme("colors.gray.100") },
+            td: {
+              color: theme("colors.gray.100"),
+            },
+            "tbody tr, thead": {
+              borderBottomColor: theme("colors.gray.300"),
+            },
           },
         },
       }),

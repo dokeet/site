@@ -43,7 +43,7 @@ export default function PostPage({ meta, code }: Post) {
       <div className="container max-w-3xl px-4 mx-auto mt-12">
         <div className="relative">
           <h1 className="text-gray-900 dark:text-gray-100">{meta.title}</h1>
-          <p className="text-gray-900 dark:text-gray-100 text-right">
+          <p className="text-gray-900 dark:text-gray-100 text-right mb-2">
             {format(parseISO(meta.publishedAt), "MMMM dd, yyyy")}
           </p>
 
@@ -59,11 +59,9 @@ export default function PostPage({ meta, code }: Post) {
             </div>
           )}
         </div>
-        <div className="mt-10 prose prose-lg dark:prose-dark">
+        <div className="mt-4 prose xl:prose-lg dark:prose-dark prose-gray">
           <Component components={MDXComponents} />
         </div>
-
-        <div className="flex justify-center mt-16 space-x-8"></div>
       </div>
     </>
   );

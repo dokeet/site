@@ -12,12 +12,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider attribute="class">
-      <div className="font-sans bg-gray-100 dark:bg-gray-900">
-        <Layout pageProps={pageProps}>
-          <DefaultSeo {...SEO} />
-          <Component {...pageProps} />
-        </Layout>
-      </div>
+      <Layout pageProps={pageProps}>
+        <DefaultSeo {...SEO} />
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
