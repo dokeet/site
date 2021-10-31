@@ -13,7 +13,7 @@ export function getStaticProps() {
 
 export default function BlogPage({ posts }: { posts: PostMeta[] }) {
   return (
-    <div className="container mt-12">
+    <div className="mt-12 mx-auto">
       <div className="py-8 space-y-2">
         {/* <img src="/pp.jpg" width="200px" height="auto" className="mx-auto rounded-full" /> */}
         <h1 className="dark:text-gray-100 text-gray-900 font-bold">

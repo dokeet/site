@@ -26,8 +26,8 @@ const Layout: FC = ({ children }) => {
           </li>
         </ul>
       </nav>
-      <main className="flex-1">{children}</main>
-      <footer className="flex-0">
+      <main>{children}</main>
+      <footer>
         <ul className="flex space-x-2 justify-end">
           <li>
             <a

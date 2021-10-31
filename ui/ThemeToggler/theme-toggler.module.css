@@ -10,7 +10,7 @@
   background-color: black;
 }
 .thumb {
-  display: block;
+  display: inline-block;
   transition: transform 100ms ease-in-out;
   transform-origin: center center;
   transform: translate(0px);
