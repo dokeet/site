@@ -65,11 +65,11 @@ module.exports = {
               },
             },
             strong: { color: theme("colors.gray.100") },
-            td: {
+            "th, td": {
               color: theme("colors.gray.100"),
             },
             "tbody tr, thead": {
-              borderBottomColor: theme("colors.gray.300"),
+              borderBottomColor: theme("colors.gray.100"),
             },
           },
         },
