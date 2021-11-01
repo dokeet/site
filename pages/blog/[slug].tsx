@@ -40,7 +40,7 @@ export default function PostPage({ meta, code }: Post) {
         }}
       />
 
-      <div className="container max-w-3xl px-4 mx-auto mt-12">
+      <div className="container max-w-3xl mx-auto mt-12">
         <div className="relative">
           <h1 className="text-gray-900 dark:text-gray-100">{meta.title}</h1>
           <p className="text-gray-900 dark:text-gray-100 text-right mb-2">
