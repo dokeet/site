@@ -22,7 +22,7 @@ export const ThemeToggler = () => {
       <Switch.Root
         className={s.root}
         onCheckedChange={handleChange}
-        checked={isLight}
+        defaultChecked={isLight}
       >
         <Switch.Thumb className={s.thumb}>
           {isLight ? (
