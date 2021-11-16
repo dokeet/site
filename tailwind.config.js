@@ -2,11 +2,7 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
-  purge: [
-    "./pages/**/*.{ts,jsx,tsx}",
-    "./components/**/*.{ts,jsx,tsx}",
-    "./ui/**/*.{ts,jsx,tsx}",
-  ],
+  purge: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
@@ -76,7 +72,7 @@ module.exports = {
       }),
     },
     fontFamily: {
-      sans: ["Inter", ...fontFamily.sans],
+      sans: ["Nunito", ...fontFamily.sans],
     },
   },
   variants: {

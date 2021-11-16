@@ -6,8 +6,7 @@ import { NextSeo } from "next-seo";
 import React from "react";
 import type { Post } from "types/post";
 import userConfig from "user-config";
-import Layout from "ui/Layout";
-import MDXComponents from "ui/MDXComponents";
+import Layout from "components/Layout";
 import { format, parseISO } from "date-fns";
 
 export default function PostPage({ meta, code }: Post) {
@@ -60,7 +59,7 @@ export default function PostPage({ meta, code }: Post) {
           )}
         </div>
         <div className="mt-4 prose xl:prose-lg dark:prose-dark prose-gray">
-          <Component components={MDXComponents} />
+          <Component />
         </div>
       </div>
     </>

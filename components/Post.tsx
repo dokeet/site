@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { PostMeta } from "../types/post";
+
 import { format, parseISO } from "date-fns";
 const Post = (post: PostMeta) => {
   return (
